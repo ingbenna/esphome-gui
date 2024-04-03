@@ -19,7 +19,7 @@ class GuiComponent : public Component {
   void setup() override;
   void loop() override;
   void dump_config() override;
-  float get_setup_priority() const override {
+  float get_setup_priority() const {
     return setup_priority::PROCESSOR;
   }
 #if LV_USE_LOG

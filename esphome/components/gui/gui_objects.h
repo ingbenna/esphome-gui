@@ -38,7 +38,7 @@ class GuiLabel : public GuiObject, public Component {
   void setup() override;
   void loop() override;
   void dump_config() override;
-  float get_setup_priority() const override {
+  float get_setup_priority() const {
     return setup_priority::AFTER_BLUETOOTH;
   }
 
@@ -60,7 +60,7 @@ class GuiCheckbox : public GuiObject, public Component {
   void setup() override;
   void loop() override;
   void dump_config() override;
-  float get_setup_priority() const override {
+  float get_setup_priority() const {
     return setup_priority::AFTER_BLUETOOTH;
   }
 
@@ -143,7 +143,7 @@ class GuiMeter : public GuiObject, public Component {
   void setup() override;
   void loop() override;
   void dump_config() override;
-  float get_setup_priority() const override {
+  float get_setup_priority() const {
     return setup_priority::AFTER_BLUETOOTH;
   }
 };
