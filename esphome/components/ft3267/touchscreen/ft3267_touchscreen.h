@@ -112,11 +112,13 @@ class FT3267Touchscreen : public touchscreen::Touchscreen, public i2c::I2CDevice
     uint8_t touch_cnt;
     uint8_t data[MAX_TOUCHES][6];
 
+/*
     if (!this->read_byte(FT3267_TD_STATUS, &touch_cnt) || touch_cnt > MAX_TOUCHES) {
       esph_log_w(TAG, "Failed to read status");
-      esph_log_w(TAG, "%s", touch_cnt);
       return;
     }
+*/
+
     if (touch_cnt == 0)
       return;
 
