@@ -743,7 +743,7 @@ async def widget_to_code(widget):
 
 
 async def to_code(config):
-    cg.add_library("lvgl/lvgl", "^8.3.9")
+    cg.add_library("lvgl/lvgl", "9.1.0")
     core.CORE.add_build_flag("-DLV_CONF_SKIP=1")
     core.CORE.add_build_flag("-DLV_USE_USER_DATA=1")
     core.CORE.add_build_flag("-DLV_USE_LOG=1")
