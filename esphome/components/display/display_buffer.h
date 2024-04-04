@@ -24,12 +24,12 @@ class DisplayBuffer : public Display {
   virtual int get_height_internal() = 0;
   virtual int get_width_internal() = 0;
 
-//#ifdef USE_GUI
+#ifdef USE_GUI
   // public DisplayBuffer methods for LVGL
   virtual void update() = 0;
   uint8_t *get_buffer() { return this->buffer_; }
   uint32_t get_buffer_length() { return this->buffer_length_; }
-//#endif
+#endif
 
  protected:
   virtual void draw_absolute_pixel_internal(int x, int y, Color color) = 0;
